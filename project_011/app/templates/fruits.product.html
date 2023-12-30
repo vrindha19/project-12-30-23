@@ -1,0 +1,177 @@
+{% load static %}
+{% block body %}
+{% include 'header.html' %}
+{% include 'nav.html' %}
+    <style>
+        
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+    /* .product {
+      max-width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    } */
+    .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+    .product img {
+      width: 100%;
+      height: 150px; /* Set the desired height */
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .product p {
+      margin: 5px 0;
+    }
+
+    .add-to-cart-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .add-to-cart-button:hover {
+      background-color: #2980b9;
+    }
+      
+ .add-to-cart-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #754235;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-align: center;
+    } 
+
+
+    .add-to-cart-button:hover {
+      background-color: #333;
+    }
+ 
+    </style>
+</head>
+<body>
+
+
+  <header>
+    <h1>Fruits shop</h1>
+</header>
+
+<section>
+  
+    <div class="product">
+        <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+        <img src="{% static 'images/product_01.jpg' %}" alt="Apple">
+        <h3>Apple</h3>
+        <p>Delicious and nutritious fruit.</p>
+        <p>Price: &#8377;100 per piece</p>
+        <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+    </div>
+
+    <div class="product">
+      <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+      <img src="{% static 'images/Strawberries.jpg' %}" alt="Strawberry">
+      <h3>Strawberry</h3>
+      <p>Small, red, and delicious.</p>
+      <p>Price: &#8377;120 per pack</p>
+      <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+  </div>
+
+  <div class="product">
+    <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+    <img src="{% static 'images/orange.jpg' %}" alt="Orange">
+    <h3>Orange</h3>
+    <p>Rich in vitamin C.</p>
+    <p>Price: &#8377;150 per piece</p>
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+</div>
+
+
+
+    <div class="product">
+        <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+        <img src="{% static 'images/mango.Jpg' %}" alt="Mango">
+        <h3>Mango</h3>
+        <p>Sweet and juicy tropical fruit.</p>
+        <p>Price: &#8377;200 per piece</p>
+        <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+    </div>
+
+    
+
+
+  
+</section>
+
+    
+  <script>
+   
+    function addToCart() {
+      // Implement your add to cart logic here
+      alert('Product added to cart!');
+    }
+ 
+  </script>
+</body>
+</html>
+{% endblock %}
+{% include 'footer.html' %}

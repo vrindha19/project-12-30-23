@@ -1,0 +1,235 @@
+{% load static %}
+{% block body %}
+{% include 'header.html' %}
+{% include 'nav.html' %}
+    <style>
+         /* body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+            background-color: #f4f4f4;
+        }
+
+        header {
+            background-color: #333;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+        .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+        }
+
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+        .product img {
+            max-width: 100%;
+            height: auto;
+        }
+
+        .product h3 {
+            margin-top: 10px;
+            font-size: 18px;
+            color: #333;
+        }
+
+        .product p {
+            color: #666;
+        } */
+        body {
+      font-family: Arial, sans-serif;
+      margin: 0;
+      padding: 0;
+      background-color: #f4f4f4;
+    }
+    header {
+            background-color: #333;
+            color: #fff;
+            padding: 50px;
+            text-align: center;
+        }
+
+
+        section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: space-around;
+            padding: 20px;
+        }
+
+    /* .product {
+      max-width: 250px;
+      background-color: #fff;
+      padding: 20px;
+      box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+      border-radius: 8px;
+      text-align: center;
+    } */
+    .product {
+            background-color: #fff;
+            border: 1px solid #ddd;
+            border-radius: 8px;
+            margin: 10px;
+            padding: 15px;
+            width: 250px;
+            transition: transform 0.3s ease-in-out;
+            text-align: center;
+        }
+        .product:hover {
+            transform: scale(1.05);
+        }
+
+    .product img {
+      width: 100%;
+      height: 150px; /* Set the desired height */
+      object-fit: cover;
+      border-radius: 8px;
+      margin-bottom: 10px;
+    }
+
+    .product h3 {
+      font-size: 1.5em;
+      margin: 10px 0;
+    }
+
+    .product p {
+      margin: 5px 0;
+    }
+
+    .add-to-cart-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #3498db;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-top: 10px;
+    }
+
+    .add-to-cart-button:hover {
+      background-color: #2980b9;
+    }
+        /* footer  */
+
+ .add-to-cart-button {
+      display: block;
+      width: 100%;
+      padding: 10px;
+      background-color: #754235;
+      color: #fff;
+      text-align: center;
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 1.2em;
+      margin-top: 10px;
+      text-align: center;
+    } 
+
+
+    .add-to-cart-button:hover {
+      background-color: #333;
+    }
+ 
+    </style>
+</head>
+<body>
+
+
+  
+  <header>
+    <h1> Vegetables Shop</h1>
+</header>
+
+<section>
+  <div class="product">
+    <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+    <img src="{% static 'images/product-1.jpg' %}" alt="Capsicum">
+    <h3>Capsicum</h3>
+    <p>Colorful and nutritious bell pepper.</p>
+    <p>Price: &#8377;90 per piece</p>
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+</div>
+
+<div class="product">
+    <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+    <img src="{% static 'images/product-14.png' %}" alt="Brinjal">
+    <h3>Brinjal</h3>
+    <p>Also known as eggplant.</p>
+    <p>Price: &#8377;80 per piece</p>
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+    <!-- 
+    <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+</div>
+
+<div class="product">
+    <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+    <img src="{% static 'images/product-5.jpg' %}" alt="Tomato">
+    <h3>Tomato</h3>
+    <p>Commonly used in salads&cooking.</p>
+    <p>Price: &#8377;0.150 per piece</p>
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+</div>
+
+<div class="product">
+    <i class="fas fa-heart wishlist-icon"></i> <!-- Heart icon -->
+    <img src="{% static 'images/product-7.jpg' %}" alt="Carrots">
+    <h3>Carrots</h3>
+    <p></p>
+    <p>Orange root vegetable.</p>
+    <!-- <label for="item-1-quantity">Quantity:</label>
+    <input type="text" name="item-1-quantity" id="item-1-quantity" value="1"> -->
+    <p>Price: &#8377;100 per piece</p>
+    <!-- <button class="add-to-cart-button" onclick="addToCart()">Add to Cart</button> -->
+
+</div>
+
+
+
+    
+
+    
+
+
+  
+</section>
+
+
+  <script>
+   
+    function addToCart() {
+      // Implement your add to cart logic here
+      alert('Product added to cart!');
+    }
+ 
+  </script>
+</body>
+</html>
+{% endblock %}
+{% include 'footer.html' %}

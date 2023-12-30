@@ -1,0 +1,15 @@
+
+<div class="description">
+    <b>capsicum</b><br>
+    <div class="item-select">
+        Price : Rs90/500grams
+    </div>
+    
+    <form method="post">
+        {% csrf_token %}
+        <label for="{{ form.quantity.id_for_label }}">quantity:</label>
+        {{ form.quantity }}
+        <br>
+        <a href="view_payment.html"><button type="submit" class="buynow-btn">Buy Now</button></a>
+    </form>
+</div>

@@ -1,0 +1,105 @@
+{% include 'header.html' %}
+{% include 'nav.html' %}
+{% load static %}
+
+{% block content %}
+
+<style>
+    /* Styling for the product image */
+    .product-image {
+        width: 300px;
+        height: 300px;
+        text-align: center;
+        border: 1px solid #ddd;
+        padding: 10px;
+    }
+
+    /* Styling for the product details */
+    .product-details {
+        padding-left: 20px;
+    }
+
+    /* Styling for the buttons */
+    .btn {
+        height: 40px;
+        width: 120px;
+        background-color: #007bff;
+        color: #fff;
+        border: none;
+        border-radius: 5px;
+        cursor: pointer;
+        margin-right: 10px;
+    }
+
+    /* Styling for the offers section */
+    .offers-section {
+        margin-top: 50px;
+    }
+
+    /* Styling for the offers list */
+    .offers-list {
+        list-style-type: disc;
+        padding-left: 20px;
+    }
+</style>
+
+<div class="container mt-5">
+    <h2>{{ product.title }}</h2>
+    
+    <div class="row mt-4">
+        
+        <!-- Product Image Section -->
+        <div class="col-md-6 ">
+            <img src="{% static product.product_image %}" alt="{{ product.title }}" style="width: auto; height: 300px;">
+        </div>
+        
+        <!-- Product Details Section -->
+        <div class="col-md-6 product-details">
+            
+            <!-- Product Price -->
+            <h4 class="mb-4">Price: Rs {{ product.selling_price }}/500 grams</h4>
+            <br>
+            
+            <!-- Quantity Selection -->
+            <div class="mb-4">
+                <label for="quantity" class="form-label">Qty:</label>
+                <select name="quantity" id="quantity" class="form-select">
+                    <option value="250">250 grams</option>
+                    <option value="500">500 grams</option>
+                    <option value="750">750 grams</option>
+                    <option value="1000">1000 grams</option>
+                </select>
+            </div>
+            <br>
+            
+            <!-- Add to Cart & Buy Now Buttons -->
+            <div class="mb-4">
+                <a href="{% url 'addcart' product.id %}">
+                    <button class="btn">Add to Cart</button>
+                </a>
+
+                <a href="#"><button class="btn">Buy Now</button></a>
+            </div>
+            
+        </div>  <!-- End of Product Details Section -->
+        
+    </div>  <!-- End of Row -->
+    
+    <!-- Available Offers Section -->
+   <!-- Available Offers Section -->
+<div class="offers-section mt-5">
+    <h5><b>Available Offers</h5></b>
+    <ul class="offers-list">
+        <li>Bank Offer: 5% Unlimited Cashback on Flipkart Axis Bank Credit</li>
+        <li>Special Price: Get extra ₹3000 off (price inclusive of discount)</li>
+        <li>No cost EMI: ₹1,667/month. Standard EMI also available</li>
+        <li>Partner Offer: ₹2000 Flipkart Gift Card on Every 1000th Transaction with a new Visa Debit/Credit Card</li>
+    </ul>
+</div>
+
+    
+</div>  <!-- End of Container -->
+
+{% endblock %}
+
+{% include 'footer.html' %}

@@ -1,0 +1,187 @@
+
+{% load static %}
+{% block body %}
+{% include 'header.html' %}
+{% include 'nav.html' %}
+
+    <style>
+        body {
+             font-family: Arial, sans-serif; 
+            background-color: #f4f4f4;
+             margin: 0;
+          padding: 0; 
+           /* display: flex;  */
+            justify-content: center;
+            align-items: center;
+            min-height: 100vh;
+        }
+
+        .order-summary {
+            background-color: #fff;
+            padding: 20px;
+            border-radius: 8px;
+            box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+            width: 1270px;
+            text-align: center;
+            align-items: center;
+            justify-content: center;
+         
+        }
+
+        h1 {
+            color: #333;
+        }
+
+        .item {
+            display: flex;
+            align-items: center;
+            margin-bottom: 20px;
+        }
+
+        .item img {
+            width: 60px;
+            height: 60px;
+            margin-right: 20px;
+            object-fit: cover;
+            border-radius: 8px;
+        }
+
+        .item-details {
+            text-align: left;
+        }
+
+        .item-details h2 {
+            margin-bottom: 8px;
+            color: #555;
+        }
+
+        .item-details p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .order-details {
+            margin-top: 20px;
+            text-align: left;
+        }
+
+        .order-details p {
+            margin: 5px 0;
+            color: #777;
+        }
+
+        .order-actions {
+            margin-top: 20px;
+            display: flex;
+            justify-content: space-between;
+        }
+
+        .btn-track-order, .btn-view-order {
+            background-color: #4caf50;
+            color: #fff;
+            padding: 10px 20px;
+            border: none;
+            border-radius: 4px;
+            cursor: pointer;
+            transition: background-color 0.3s ease-in-out;
+        }
+
+        .btn-track-order:hover, .btn-view-order:hover {
+            background-color: #45a049;
+        }
+
+        /* footer  */
+       
+
+.order-actions {
+      text-align: center; /* Center the buttons */
+    }
+
+    .btn-view-order,
+    .btn-track-order {
+      display: inline-block;
+      padding: 10px 20px;
+      font-size: 16px;
+      text-align: center;
+      text-decoration: none;
+      background-color: #4CAF50; /* Green background color */
+      color: white; /* White text color */
+      border: 1px solid #4CAF50; /* Green border */
+      border-radius: 4px; /* Rounded corners */
+      cursor: pointer;
+      margin: 5px; /* Add margin between buttons */
+    }
+
+    .btn-view-order:hover,
+    .btn-track-order:hover {
+      background-color: #45a049; /* Darker green on hover */
+    }
+ 
+
+
+    /* footer */
+
+   
+ 
+    </style>
+</head>
+<body>
+  
+<div class="order-summary">
+    <h1> View Order </h1>
+
+    <div class="item">
+        <img src="{% static 'images/product_01.jpg' %}" alt="Apple">
+        <div class="item-details">
+            <h2>Apple</h2>
+            <p>Quantity: 5</p>
+            <p>Price: $2.50 each</p>
+        </div>
+    </div>
+
+    <div class="item">
+        <img src="{% static 'images/product-7.jpg' %}" alt="Tomato">
+        <div class="item-details">
+            <h2>Tomato</h2>
+            <p>Quantity: 3</p>
+            <p>Price: $1.00 each</p>
+        </div>
+    </div>
+
+    <div class="item">
+      <img src="{% static 'images/Strawberries.jpg' %}" alt="Strawberries">
+      <div class="item-details">
+          <h2>Strawberries</h2>
+          <p>Quantity: 3</p>
+          <p>Price: $1.00 each</p>
+      </div>
+  </div>
+
+    <div class="order-details">
+        <p><strong>Order Number:</strong> #123456</p>
+        <p><strong>Date:</strong> January 15, 2024</p>
+        <p><strong>Shipping To:</strong> John Doe, 123 Main St, Cityville</p>
+    </div>
+
+    <div class="order-actions">
+      <a href="{% url 'orderpage' %}" class="btn-view-order" onclick="viewOrder()">View Order</a>
+      <a href="track_order.html" class="btn-track-order" onclick="trackOrder()">Track Order</a>
+    </div>
+
+
+<script>
+    function viewOrder() {
+        // Handle view order functionality (e.g., redirect to order page)
+        alert("Redirecting to order page...");
+    }
+
+    function trackOrder() {
+        // Handle track order functionality (e.g., redirect to tracking page)
+        alert("Redirecting to order tracking page...");
+    }
+</script>
+
+</body>
+</html>
+{% endblock %}
+{% include 'footer.html' %}

@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Logout Page</title>
+  <style>
+    body {
+      font-family: Arial, sans-serif;
+      background-color: #f4f4f4;
+      margin: 0;
+      padding: 0;
+      display: flex;
+      align-items: center;
+      justify-content: center;
+      height: 100vh;
+    }
+
+    .logout-container {
+      text-align: center;
+    }
+
+    .logout-message {
+      font-size: 24px;
+      margin-bottom: 20px;
+    }
+
+    .logout-button {
+      display: inline-block;
+      padding: 10px 20px;
+      background-color: #3498db; /* Button color */
+      color: #ffffff; /* Text color */
+      text-decoration: none;
+      border: none;
+      border-radius: 5px;
+      cursor: pointer;
+      font-size: 16px;
+    }
+
+    .logout-button:hover {
+      background-color: #2980b9; /* Button color on hover */
+    }
+  </style>
+</head>
+<body>
+
+  <div class="logout-container">
+    <p class="logout-message">Are you sure you want to log out?</p>
+    <a href="{% url 'home' %}" class="logout-button">Cancel</a>
+
+    <a href="{% url 'logout_action' %}" class="logout-button">Logout</a>
+  </div>
+
+</body>
+</html>
